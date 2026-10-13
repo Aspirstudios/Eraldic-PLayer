@@ -1,96 +1,135 @@
 # 𝔥𝔢𝔯𝔞𝔩𝔡𝔦𝔠 𝔭𝔩𝔞𝔶𝔢𝔯
 
-## 📜 𝕸𝖆𝖓𝖎𝖋𝖎𝖊𝖘𝖙𝖔 𝖉𝖊𝖑 𝕴𝖓𝖌𝖊𝖓𝖎𝖔 𝕸𝖚𝖑𝖙𝖎𝖒𝖊𝖉𝖎𝖆
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
+![pygame](https://img.shields.io/badge/pygame-2.x-green?logo=python&logoColor=white)
+![yt-dlp](https://img.shields.io/badge/yt--dlp-latest-red)
+![VLC](https://img.shields.io/badge/VLC-required-orange?logo=vlc&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-En el amanecer de aqueste siglo dominado por los silicios y los algoritmos, cuando los hombres parecen haber olvidado el valor de la manufactura, un heraldo recorre las almenas del reino anunciando una obra nueva y singular: **Heraldic Player**. Aqueste es un reproductor para la gran biblioteca de YouTube **forjado enteramente en los talleres de Python**, dotado de su propia interfaz gráfica sobre los firmes cimientos de *pygame* y revestido con una estética extraída directamente de los tratados de la heráldica medieval: un severo contraste en blanco y negro, sutiles filigranas de oro, espadas cruzadas, coronas imperiales, torreones de castillos y flores de lis.
+> **A handcrafted, local-only YouTube player for the medieval soul.**  
+> Black-and-white heraldry, golden filigree, and zero telemetry.
 
-No os halláis ante un burdo envoltorio ni una imitación de las interfaces comerciales que saturan el mercado de ultramar. Esta es una **pieza artesanal de alta orfebrería digital, escrita línea por línea**, concebida desde su primer trazo para ejecutarse exclusivamente en vuestro propio feudo local. Aquí no encontraréis cuentas extranjeras, ni espías, ni telemetrías que vigilen vuestros hábitos, ni promesas vacías de mercachifles. El ingenio toma al usuario del sistema operativo como el único y legítimo señor del castillo, custodiando los registros de su perfil en el legajo privado del reino, tal como un fiel escribano anotaría cada sesión sobre el pergamino sagrado.
+---
 
-Ruta del perfil del señor:
+## 📜 𝕸𝖆𝖓𝖎𝖋𝖊𝖘𝖙𝖔 𝖔𝖋 𝖙𝖍𝖊 𝕸𝖚𝖑𝖙𝖎𝖒𝖊𝖉𝖎𝖆 𝕬𝖗𝖙𝖎𝖋𝖆𝖈𝖙
+
+At the dawn of this century dominated by silicon and algorithms, when men seem to have forgotten the value of craftsmanship, a herald rides along the battlements of the kingdom announcing a new and singular work: **Heraldic Player**. This is a player for the great library of YouTube **forged entirely in the workshops of Python**, endowed with its own graphical interface on the firm foundations of *pygame* and clad in an aesthetic drawn directly from treatises on medieval heraldry: a severe contrast in black and white, subtle gold filigrees, crossed swords, imperial crowns, castle towers, and fleurs-de-lis.
+
+You are not before a crude wrapper nor an imitation of the commercial interfaces that saturate the overseas market. This is a **handcrafted piece of high digital goldsmithing, written line by line**, conceived from its first stroke to run exclusively in your own local fief. Here you will find no foreign accounts, no spies, no telemetry watching your habits, no empty promises from peddlers. The artifact takes the operating system user as the only and legitimate lord of the castle, guarding the records of his profile in the private ledger of the kingdom, just as a faithful scribe would note each session on the sacred parchment.
+
+**Lord’s profile path:**
+```bash
 ~/.ytmusic_cmd/profiles.json
+```
 
 ---
 
-### 𝓘. 𝓛𝓪𝓼 𝓟𝓾𝓮𝓻𝓽𝓪𝓼 𝓭𝓮𝓵 𝓒𝓪𝓼𝓽𝓲𝓵𝓵𝓸
+## 📖 Table of Contents
 
-Al invocar el artefacto, vuestros ojos no serán agraviados por un menú frío, genérico y desalmado. En su lugar, contemplaréis una introducción puramente heráldica: **dos solemnes espadas que convergen sobre la figura de un sol radiante**, seguidas de un destello dorado que revela, finalmente, el nombre de la casa: *Heraldic Player*. El soberano recibe además un saludo aleatorio extraído de las crónicas, como si un heraldo distinto acudiese a la escalinata para darle la bienvenida cada mañana:
-
-* "¡Paz y bien, mi señor! Que los acordes guíen vuestra jornada en este nuevo día."
-* "El trovador afina las cuerdas de su laúd para vuestro deleite."
-* "Las puertas de la fortaleza se abren de par en par ante vuestra presencia."
-
----
-
-### 𝓘𝓘. 𝓛𝓪 𝓑𝓿́𝓼𝓺𝓮𝓭𝓪, 𝓐𝓯𝓲𝓵𝓪𝓭𝓪 𝓬𝓸𝓶𝓸 𝓾𝓷𝓪 𝓗𝓸𝓳𝓪 𝓭𝓮 𝓣𝓸𝓵𝓮𝓭𝓸
-
-El motor de búsqueda de este ingenio no se conforma con una sola estrategia ni fía su suerte a los azares de la red. Interroga a la gran biblioteca a través de **cuatro senderos en cascada perfectamente ordenados**, respetando el rango real del sitio y no una aproximación defectuosa:
-
-1. Realiza una petición directa a la URL de resultados utilizando el poder de *yt-dlp*, portando el parámetro `sp` correctamente codificado en sus líneas.
-2. Ejecuta una consulta propia y directa a las entrañas de *InnerTube* mediante *urllib*, manteniéndose independiente de cualquier extractor general.
-3. Lleva a cabo la lectura minuciosa de la página de resultados para decodificar el entramado de `ytInitialData`.
-4. Como último recurso ante la adversidad, convoca el conjuro `ytsearchN` del propio *yt-dlp*.
-
-Si las artes de *yt-dlp* flaqueasen o quedasen desfasadas ante los cambios del reino exterior, el propio ingenio lo detecta con presteza y se actualiza a sí mismo por la vía de *pip*. Si la tormenta fuera tal que todo lo demás fallase, el artefacto deja un testimonio honesto y transparente en el archivo `search_error.log`. En estas tierras no hay brujería ni magia negra: lo que contempláis es pura ingeniería blindada en acero.
+- [I. The Gates of the Castle](#i-the-gates-of-the-castle)
+- [II. The Search, Sharp as a Toledo Blade](#ii-the-search-sharp-as-a-toledo-blade)
+- [III. Filters, Banner of Playback and Library](#iii-filters-banner-of-playback-and-library)
+- [IV. The Equalizer and the Art of Tone](#iv-the-equalizer-and-the-art-of-tone)
+- [V. Logistics of Supplies and Downloads](#v-logistics-of-supplies-and-downloads)
+- [VI. The Main Screen: An Animated Stained-Glass Window](#vi-the-main-screen-an-animated-stained-glass-window)
+- [VII. No Tributes, No Accounts, No Noise](#vii-no-tributes-no-accounts-no-noise)
+- [The Knight’s Shortcuts](#the-knights-shortcuts)
+- [IX. Brief Manifesto](#ix-brief-manifesto)
 
 ---
 
-### 𝓘𝓘𝓘. 𝓕𝓲𝓵𝓽𝓻𝓸𝓼, 𝓔𝓼𝓽𝓪𝓷𝓭𝓪𝓻𝓽𝓮 𝓭𝓮 𝓡𝓿%𝓻𝓸𝓭𝓿𝓬𝓬𝓲𝓸́𝓷 𝔂 𝓑𝓲𝓦𝓵𝓲𝓸𝓽𝓮🇨🇦
+<a name="i-the-gates-of-the-castle"></a>
+### 𝓘. 𝓣𝓱𝓮 𝓖𝓪𝓽𝓮𝓼 𝓸𝓯 𝓽𝓱𝓮 𝓒𝓪𝓼𝓽𝓵𝓮
 
-Cada melodía que entra en los dominios del castillo es clasificada con estricto juicio por los escribanos: cantar individual, vídeo detallado o cantar de larga duración (podcast), juzgando siempre según su canal de procedencia, su duración exacta y las palabras de su título. **A la izquierda de la interfaz se despliega la cola de reproducción**, alzándose majestuosa como el estandarte que guía vuestra marcha musical; a la diestra, la biblioteca custodia con celo vuestros cantares favoritos, el historial de las jornadas pasadas, las listas guardadas y las tonadas escuchadas recientemente. Las listas salvadas se sincronizan de manera automática en el instante en que se abren las puertas del ingenio, portando su correspondiente marca de tiempo y la portada del primer cantar como blasón.
+When invoking the artifact, your eyes will not be offended by a cold, generic, soulless menu. Instead, you will behold a purely heraldic introduction: **two solemn swords converging over the figure of a radiant sun**, followed by a golden flash that finally reveals the name of the house: *Heraldic Player*. The sovereign also receives a random greeting drawn from the chronicles, as if a different herald came to the staircase to welcome him each morning:
 
----
-
-### 𝓘𝓥. 𝓔𝓵 𝓔𝓬𝓿𝓪𝓵𝓲𝔃𝓪𝓭𝓸𝓻 𝔂 𝓮𝓵 𝓐𝓻𝓽𝓮 𝓭𝓮𝓵 𝓣𝓸𝓷𝓸
-
-Bajo la estampa visual del cantar que resuena en las estancias, **un ecualizador de cuarenta bandas pulsa con vida propia**, leyendo el audio en vivo mediante los hilos de *ffmpeg* y descomponiéndolo en tiempo real a través de las complejas matemáticas de *numpy*. No estamos ante un ornamento muerto o decorativo; el ecualizador respira, vibra y danza en perfecta consonancia con las ondas de la música.
-
-El control de velocidad os permite ajustar la marcha desde un paso lento y ceremonioso de `x0.50` hasta un galope tendido de `x2.00`, ordenado directamente al místico *VLC* sin alterar en absoluto el tono de la obra. Por su parte, el control del tono os concede la facultad de elevar o descender la melodía hasta doce semitonos exactos, procesando el flujo de audio en los talleres de *ffmpeg* mediante la herramienta *rubberband* si estuviere disponible en vuestro reino, o aplicando el astuto truco de *asetrate* con *atempo* en caso contrario. Los archivos procesados se almacenan temporalmente en una solana (caché) que se purga de forma automática en cuanto el peso de los suministros supera los 250 MB.
+* “Peace and good, my lord! May the chords guide your journey on this new day.”
+* “The troubadour tunes the strings of his lute for your delight.”
+* “The gates of the fortress open wide before your presence.”
 
 ---
 
-### 𝓥. 𝓛𝓸𝓰𝓲́𝓼𝓽𝓲𝓬𝓪 𝓭𝓮 𝓢𝓿𝓶𝓲𝓷𝓲𝓼𝓽𝓻𝓸𝓼 𝔂 𝓓𝓮𝓼𝓬𝓪𝓻𝓰𝓪𝓼
+<a name="ii-the-search-sharp-as-a-toledo-blade"></a>
+### 𝓘𝓘. 𝓣𝓱𝓮 𝓢𝓮𝓪𝓻𝓬𝓱, 𝓢𝓱𝓪𝓻𝓹 𝓪𝓼 𝓪 𝓣𝓸𝓵𝓮𝓭𝓸 𝓑𝓵𝓪𝓭𝓮
 
-Aprovisionar vuestras arcas personales con las mejores obras del reino es tan sencillo como presionar la tecla **O** para el cantar que se halla activo, o la tecla **W** si deseáis acaparar toda la vista del inventario actual. Los archivos desembarcan seguros y sin contratiempos en la armería musical del sistema, convertidos al universal formato MP3 si *ffmpeg* se encuentra trabajando en los talleres, o a M4A si las herramientas escasean. El propio ingenio se encarga de resolver la presencia de *ffmpeg* por sus propios medios, incluso si se ve en la necesidad de importarlo desde los almacenes lejanos de *imageio-ffmpeg*.
+The search engine of this artifact does not settle for a single strategy nor trusts its fate to the hazards of the network. It interrogates the great library through **four perfectly ordered cascade paths**, respecting the site’s royal rank and not a defective approximation:
 
-Ruta de la armería de descargas:
+1. It makes a direct request to the results URL using the power of *yt-dlp*, carrying the `sp` parameter correctly encoded in its lines.
+2. It executes its own direct query to the entrails of *InnerTube* via *urllib*, remaining independent of any general extractor.
+3. It carries out a meticulous reading of the results page to decode the framework of `ytInitialData`.
+4. As a last resort in the face of adversity, it summons the `ytsearchN` spell of *yt-dlp* itself.
+
+If the arts of *yt-dlp* were to falter or become outdated before changes in the outside kingdom, the artifact itself detects it promptly and updates itself via *pip*. If the storm were such that everything else failed, the artifact leaves an honest and transparent testimony in the `search_error.log` file. In these lands there is no witchcraft or black magic: what you behold is pure engineering armored in steel.
+
+---
+
+<a name="iii-filters-banner-of-playback-and-library"></a>
+### 𝓘𝓘𝓘. 𝓕𝓲𝓵𝓽𝓮𝓻𝓼, 𝓑𝓪𝓷𝓷𝓮𝓻 𝓸𝓯 𝓟𝓵𝓪𝔂𝓫𝓪𝓬𝓴 𝓪𝓷𝓭 𝓛𝓲𝓫𝓻𝓪𝓻𝔂 🇨🇦
+
+Every melody that enters the domains of the castle is classified with strict judgment by the scribes: individual song, detailed video, or long-duration song (podcast), always judging according to its channel of origin, its exact duration, and the words of its title. **On the left of the interface the playback queue unfolds**, rising majestically like the banner that guides your musical march; on the right, the library zealously guards your favorite songs, the history of past days, saved lists, and recently listened tunes. Saved lists synchronize automatically the moment the gates of the artifact open, bearing their corresponding timestamp and the cover of the first song as a coat of arms.
+
+---
+
+<a name="iv-the-equalizer-and-the-art-of-tone"></a>
+### 𝓘𝓥. 𝓣𝓱𝓮 𝓔𝓺𝓾𝓪𝓵𝓲𝔃𝓮𝓻 𝓪𝓷𝓭 𝓽𝓱𝓮 𝓐𝓻𝓽 𝓸𝓯 𝓣𝓸𝓷𝓮
+
+Beneath the visual stamp of the song that resounds in the halls, **a forty-band equalizer pulses with a life of its own**, reading the audio live through the threads of *ffmpeg* and decomposing it in real time through the complex mathematics of *numpy*. We are not before a dead or decorative ornament; the equalizer breathes, vibrates, and dances in perfect consonance with the waves of the music.
+
+The speed control allows you to adjust the pace from a slow and ceremonious step of `x0.50` to a full gallop of `x2.00`, ordered directly to the mystic *VLC* without altering at all the pitch of the work. For its part, the pitch control grants you the power to raise or lower the melody by up to twelve exact semitones, processing the audio stream in the workshops of *ffmpeg* using the *rubberband* tool if it is available in your kingdom, or applying the clever trick of *asetrate* with *atempo* otherwise. Processed files are stored temporarily in a sunroom (cache) that is purged automatically as soon as the weight of the supplies exceeds 250 MB.
+
+---
+
+<a name="v-logistics-of-supplies-and-downloads"></a>
+### 𝓥. 𝓛𝓸𝓰𝓲𝓼𝓽𝓲𝓬𝓼 𝓸𝓯 𝓢𝓾𝓹𝓹𝓵𝓲𝓮𝓼 𝓪𝓷𝓭 𝓓𝓸𝔀𝓷𝓵𝓸𝓪𝓭𝓼
+
+Provisioning your personal coffers with the best works of the kingdom is as simple as pressing the **O** key for the song that is active, or the **W** key if you wish to capture the entire view of the current inventory. The files disembark safe and without mishaps in the system’s musical armory, converted to the universal MP3 format if *ffmpeg* is working in the workshops, or to M4A if tools are scarce. The artifact itself takes care of resolving the presence of *ffmpeg* by its own means, even if it finds itself in need of importing it from the distant warehouses of *imageio-ffmpeg*.
+
+**Download armory path:**
+```bash
 ~/Music/YTMUSIC_CMD
+```
 
 ---
 
-### 𝓥𝓘. 𝓛𝓪 𝓟𝓪𝓷𝓽𝓪𝓵𝓵𝓪 𝓟𝓻𝓲𝓷𝓬𝓲%𝓪𝓵: 𝓤𝓷𝓪 𝓥𝓲𝓭𝓻𝓮𝓪𝓿𝓪 𝓐𝓷𝓲𝓶𝓪𝓭𝓪
+<a name="vi-the-main-screen-an-animated-stained-glass-window"></a>
+### 𝓥𝓘. 𝓣𝓱𝓮 𝓜𝓪𝓲𝓷 𝓢𝓬𝓻𝓮𝓮𝓷: 𝓐𝓷 𝓐𝓷𝓲𝓶𝓪𝓽𝓮𝓭 𝓢𝓽𝓪𝓲𝓷𝓮𝓭-𝓖𝓵𝓪𝓼𝓼 𝓦𝓲𝓷𝓭𝓸𝔀
 
-El modo hogareño no es una lista inerte ni un frío índice de pergaminos. Es **una vidriera gótica completamente animada con estrellas doradas que titilan y flotan lentamente** a lo largo y ancho de la pantalla. Sobre esta hermosa estructura se despliega la organización de todo vuestro feudo: vuestras listas guardadas, los cantares de las últimas horas, las tonadas más escuchadas por vuestra merced, vuestros favoritos indiscutibles y las sugerencias que el bardo os ofrece basándose en vuestro historial y gustos. Las portadas de los cantares se cargan en hilos paralelos de ejecución, asegurando que la interfaz jamás se detenga ni se congele a esperar las respuestas de las redes externas.
-
----
-
-### 𝓥𝓘𝓘. 𝓢𝓲𝓷 𝓣𝓻𝓲𝓦𝓿𝓽𝓸𝓼, 𝓢𝓲𝓷 𝓒𝓿e𝓷𝓽𝓪𝓼, 𝓢𝓲𝓷 𝓡𝓿𝓲𝓭𝓸
-
-En este territorio no existen los accesos obligatorios de Google, ni los intrincados protocolos de OAuth, ni las contraseñas extranjeras (tokens) que comprometan vuestra soberanía. El usuario del sistema operativo es el único señor, juez y soberano absoluto de lo que acontece. Todo se almacena y se protege dentro de vuestras propias tierras físicas. 
-
-El artefacto tiene la capacidad de instalar sus propias dependencias si detectase que alguna falta en los talleres (*yt-dlp, python-vlc, pygame, pillow, numpy, imageio-ffmpeg*), reiniciándose con presteza tras completarse la primera forja. Si el entorno de *VLC* no se hallase en el reino, el ingenio intentará convocarlo de inmediato mediante los heraldos oficiales del sistema (*winget, brew, apt, dnf o pacman*), adaptándose rigurosamente a los fueros y leyes del territorio informático donde se ejecute.
+The home mode is not an inert list nor a cold index of parchments. It is **a fully animated Gothic stained-glass window with golden stars that twinkle and float slowly** across the length and breadth of the screen. Over this beautiful structure unfolds the organization of your entire fief: your saved lists, the songs of the last hours, the tunes most listened to by your lordship, your indisputable favorites, and the suggestions that the bard offers you based on your history and tastes. The covers of the songs are loaded in parallel execution threads, ensuring that the interface never stops or freezes waiting for responses from external networks.
 
 ---
 
-## 𝕷𝖔𝖘 𝕬𝖙𝖆𝖏𝖔𝖘 𝖉𝖊𝖑 𝕮𝖆𝖇𝖆𝖑𝖑𝖊𝖗𝖔
+<a name="vii-no-tributes-no-accounts-no-noise"></a>
+### 𝓥𝓘𝓘. 𝓝𝓸 𝓣𝓻𝓲𝓫𝓾𝓽𝓮𝓼, 𝓝𝓸 𝓐𝓬𝓬𝓸𝓾𝓷𝓽𝓼, 𝓝𝓸 𝓝𝓸𝓲𝓼𝓮
 
-| 𝕿𝖊𝖈𝖑𝖆 | 𝕬𝖈𝖈𝖎𝖔́𝖓 𝖈𝖔𝖓𝖏𝖚𝖗𝖆𝖉𝖆 |
+In this territory there are no mandatory Google logins, nor the intricate OAuth protocols, nor foreign passwords (tokens) that compromise your sovereignty. The operating system user is the only lord, judge, and absolute sovereign of what happens. Everything is stored and protected within your own physical lands.
+
+The artifact has the ability to install its own dependencies if it detects that any are missing in the workshops (*yt-dlp, python-vlc, pygame, pillow, numpy, imageio-ffmpeg*), restarting promptly after the first forging is completed. If the *VLC* environment is not found in the kingdom, the artifact will attempt to summon it immediately through the system’s official heralds (*winget, brew, apt, dnf, or pacman*), rigorously adapting to the laws and customs of the computer territory where it runs.
+
+---
+
+<a name="the-knights-shortcuts"></a>
+## 𝕿𝖍𝖊 𝕶𝖓𝖎𝖌𝖍𝖙’𝖘 𝕾𝖍𝖔𝖗𝖙𝖈𝖚𝖙𝖘
+
+| 𝕶𝖊𝖞 | 𝕮𝖔𝖓𝖏𝖚𝖗𝖊𝖉 𝕬𝖈𝖙𝖎𝖔𝖓 |
 | :---: | :--- |
-| **Espacio** | Pausar la melodía o reanudar el cantar activo. |
-| **N / P** | Avanzar con presteza al siguiente cantar o regresar al previo. |
-| **+ / -** | Elevar o descender el volumen del elixir musical. |
-| **← / →** | Retroceder o avanzar diez segundos en el tiempo de la obra. |
-| **[ / ]** | Minorar o aumentar la velocidad del galope musical. |
-| **, / .** | Descender o elevar el tono por un semitono exacto. |
-| **S / R** | Alterar el orden establecido (al azar) y repetir el cantar. |
-| **F** | Marcar la obra como favorita dentro de vuestras arcas. |
-| **G** | Guardar la lista actual en el pergamino del perfil. |
-| **Y** | Sincronizar todas las listas guardadas a lo largo del reino. |
-| **I** | Regresar de inmediato al hogar (la vidriera animada). |
-| **L** | Desplegar ante vuestros ojos la gran biblioteca. |
-| **/** | Invocar el afilado motor de búsqueda. |
-| **Q** | Clausurar el ingenio, desarmar los talleres y salir en paz. |
+| **Space** | Pause the melody or resume the active song. |
+| **N / P** | Advance swiftly to the next song or return to the previous one. |
+| **+ / -** | Raise or lower the volume of the musical elixir. |
+| **← / →** | Rewind or advance ten seconds in the time of the work. |
+| **[ / ]** | Decrease or increase the speed of the musical gallop. |
+| **, / .** | Lower or raise the pitch by one exact semitone. |
+| **S / R** | Toggle shuffle and repeat the song. |
+| **F** | Mark the work as favorite within your coffers. |
+| **G** | Save the current list in the profile’s parchment. |
+| **Y** | Synchronize all saved lists throughout the kingdom. |
+| **I** | Return immediately home (the animated stained-glass window). |
+| **L** | Display before your eyes the great library. |
+| **/** | Invoke the sharp search engine. |
+| **Q** | Close the artifact, disarm the workshops, and leave in peace. |
 
 ---
 
-### 𝓘𝓧. 𝓑𝓻𝓮𝓿𝓮 𝓜𝓪𝓷𝓲𝓯𝓲𝓮𝓼𝓽𝓸
+<a name="ix-brief-manifesto"></a>
+### 𝓘𝓧. 𝓑𝓻𝓲𝓮𝓯 𝓜𝓪𝓷𝓲𝓯𝓮𝓼𝓽𝓸
 
+*(The source text has no body for this section.)*
