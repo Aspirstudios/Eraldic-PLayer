@@ -1,51 +1,82 @@
-# Eraldic-PLayer
-May the music guide you through these realms
-In the dawn of this century of silicons and algorithms, a herald walks the battlements announcing a new work: Heraldic Player, a YouTube player forged entirely in Python, with its own GUI on pygame and a character drawn directly from medieval heraldry: severe black and white, golden filigree, crossed swords, crowns, castles and fleurs-de-lis.
+# 📜 Heraldic Player: El Ingenio Musical del Reino
 
-It is not just another wrapper around the API of the day. It is a handcrafted piece, written line by line, designed to run locally, without foreign accounts, without telemetry, without empty promises. It uses the system user as lord of the castle and saves its profile in ~/.ytmusic_cmd/profiles.json, like a scribe noting each session on his parchment.
+En el amanecer de aqueste siglo de silicios y algoritmos, un heraldo recorre las almenas anunciando una obra nueva: **Heraldic Player**, un reproductor de la gran biblioteca de YouTube **forjado enteramente en los talleres de Python**. Posee su propia interfaz gráfica sobre los cimientos de *pygame* y una estética extraída directamente de la heráldica medieval: un severo blanco y negro, filigranas de oro, espadas cruzadas, coronas, castillos y flores de lis.
 
-I. The castle gate
-When you open the application, you are not greeted by a cold menu. You see a heraldic intro: two swords converging over a radiant sun, a golden flash and finally the name of the house: Heraldic Player. The user also receives a random greeting, as if a different herald welcomed them each day: “Greetings, my lord. May the chords guide your day.”, “The troubadour tunes his lute.”, “The castle gates open.”
+No es aqueste un burdo envoltorio para las interfaces comerciales de moda. Es una **pieza artesanal, escrita línea por línea**, diseñada para ejecutarse en vuestro propio feudo local, sin cuentas extranjeras, sin espías ni telemetrías, y sin promesas vacías. Toma al usuario del sistema como único señor del castillo y guarda su perfil en `~/.ytmusic_cmd/profiles.json`, tal como un escribano anotaría cada sesión en su pergamino.
 
-II. The search, sharp as a blade
-The search engine does not settle for a single strategy. It queries YouTube through several cascading paths, respecting the real ranking of the site and not an approximate imitation:
+---
 
-Direct request to the results URL via yt-dlp, with the sp parameter correctly encoded.
-Its own InnerTube query using urllib, independent of the extractor.
-Reading the results page and decoding ytInitialData.
-As a last resort, ytsearchN: from yt-dlp itself.
-If yt-dlp fails, the application detects it and updates itself via pip. If everything fails, it leaves an honest record in search_error.log. There is no black magic: there is engineering in armour.
+## I. Las Puertas del Castillo
+Al abrir el artefacto, no os recibe un menú frío y desalmado. Contemplaréis una introducción heráldica: **dos espadas que convergen sobre un sol radiante**, un destello dorado y, finalmente, el nombre de la casa: *Heraldic Player*. El señor recibe además un saludo aleatorio, como si un heraldo distinto le diese la bienvenida cada mañana:
 
-III. Filters, queue and library
-Each result is classified with judgement: song, video or podcast, according to channel, duration and title. The queue is shown on the left, like a banner of playback; on the right, the library with favourites, history, saved lists and recent lists. Saved lists are synchronised automatically when the application opens, with a timestamp and cover art taken from the first track.
+* 📜 *«¡Paz y bien, mi señor! Que los acordes guíen vuestra jornada.»*
+* 🪕 *«El trovador afina su laúd.»*
+* 🏰 *«Las puertas del castillo se abren de par en par.»*
 
-IV. The equaliser and pitch
-Beneath the cover of the playing track, a forty-band equaliser pulses, reading live audio through ffmpeg and decomposing it in real time with numpy. It is not decorative: it breathes with the music.
+---
 
-The speed control goes from x0.50 to x2.00 and is applied by VLC without touching the pitch. The pitch control allows raising or lowering up to twelve semitones, processing the audio with ffmpeg, using rubberband when available and an asetrate trick with atempo when not. Processed files are cached and purged automatically once they exceed 250 MB.
+## II. La Búsqueda, Afilada como una Hoja de Toledo
+El motor de búsqueda no se conforma con una sola estrategia; interroga a la gran biblioteca a través de **cuatro senderos en cascada**, respetando el orden real del reino y no una burda imitación:
 
-V. Downloads and ffmpeg
-Downloading is as simple as pressing O for the current track or W for the whole view. Files land in ~/Music/YTMUSIC_CMD, converted to MP3 if ffmpeg is available, or to M4A otherwise. The application resolves ffmpeg by itself, even if it has to fetch it from imageio-ffmpeg.
+1. Petición directa a la URL de resultados vía `yt-dlp`, con el parámetro `sp` correctamente codificado.
+2. Una consulta propia a *InnerTube* mediante `urllib`, independiente del extractor general.
+3. Lectura directa de la página de resultados y decodificación de `ytInitialData`.
+4. Como último recurso, el conjuro `ytsearchN` del propio `yt-dlp`.
 
-VI. The home screen, like a stained-glass window
-The home mode is not a list. It is an animated stained-glass window with golden stars that twinkle and drift slowly across the screen. On it, horizontal shelves unfold: saved lists, recent lists, listened tracks, favourites and suggestions — all drawn from the user's history and tastes. Covers are loaded in parallel threads, so the interface never stalls waiting for the network.
+Si `yt-dlp` flaquease, el ingenio lo detecta y se actualiza a sí mismo por la vía de `pip`. Si todo lo demás fallase, deja un registro honesto en `search_error.log`. **No hay magia negra aquí: es ingeniería blindada en acero.**
 
-VII. No accounts, no noise
-There is no Google login, no OAuth, no tokens. The system user is the lord. Everything is saved locally. The application installs its own dependencies if missing (yt-dlp, python-vlc, pygame, pillow, numpy, imageio-ffmpeg) and restarts itself the first time. If VLC is not installed, it tries to install it with winget, brew, apt, dnf or pacman, depending on the kingdom where it runs.
+---
 
-VIII. Knight's shortcuts
-Space · pause and resume.
-N / P · next and previous.
-+ / - · volume.
-← / → · rewind or forward ten seconds.
-[ / ] · decrease or increase speed.
-, / . · lower or raise pitch by one semitone.
-S / R · shuffle and repeat.
-F · favourite. G · save list.
-Y · sync all saved lists.
-I · go home. L · library.
-/ · search. Q · quit.
-IX. A brief manifesto
-Heraldic Player does not aim to be the most powerful or the fastest player. It aims to be honest: to use YouTube without intermediaries, to download without asking permission, to equalise without selling data, and to dress everything with the solemnity of a heraldic shield. A program written to last, to be read and to sound.
+## III. Filtros, Estandarte de Reproducción y Biblioteca
+Cada resultado es clasificado con juicio: cantar, vídeo o cantar de larga duración (podcast), según su canal, duración y título. **A la izquierda se despliega la cola de reproducción**, alzándose como el estandarte de vuestra marcha musical; a la derecha, la biblioteca custodia vuestros cantares favoritos, el historial, las listas guardadas y las tonadas recientes. Las listas salvadas se sincronizan automáticamente al abrir el ingenio, portando su marca de tiempo y la portada del primer cantar.
 
-May music fill your tavern, lord of chords
+---
+
+## IV. El Ecualizador y el Arte del Tono
+Bajo la estampa del cantar que resuena, **un ecualizador de cuarenta bandas pulsa con vida propia**, leyendo el audio en vivo mediante `ffmpeg` y descomponiéndolo en tiempo real con las matemáticas de `numpy`. No es mero adorno: respira y danza al son de la música.
+
+El control de velocidad os permite marchar desde un paso lento de `x0.50` hasta un galope de `x2.00`, aplicado por el místico `VLC` sin alterar el tono. El control del tono os permite elevar o descender la melodía hasta doce semitonos, procesando el flujo con `ffmpeg` (usando `rubberband` si estuviere disponible, o el truco de `asetrate` con `atempo` en caso contrario). Los archivos procesados se guardan en una solana (caché) que se purga sola al superar los 250 MB.
+
+---
+
+## V. Logística de Suministros y Descargas
+Aprovisionar vuestras arcas es tan sencillo como pulsar la tecla **O** para el cantar activo, o la **W** para toda la vista del inventario. Los archivos desembarcan seguros en `~/Music/YTMUSIC_CMD`, convertidos al formato MP3 si `ffmpeg` estuviere en los talleres, o a M4A si no lo estuviere. El ingenio resuelve la presencia de `ffmpeg` por sí solo, incluso si debe importarlo desde los almacenes de `imageio-ffmpeg`.
+
+---
+
+## VI. La Pantalla Principal: Una Vidriera Animada
+El modo hogareño no es una lista inerte. Es **una vidriera gótica animada con estrellas doradas que titilan y flotan lentamente** por la pantalla. Sobre ella se despliega un inventario de anaqueles horizontales: vuestras listas guardadas, los cantares recientes, las tonadas más escuchadas, vuestros favoritos y las sugerencias del bardo basadas en vuestro historial. Las portadas se cargan en hilos paralelos, por lo que **la interfaz jamás se detiene a esperar por las redes externas**.
+
+---
+
+## VII. Sin Tributos, Sin Cuentas, Sin Ruido
+No hay aquí accesos de Google, ni protocolos OAuth, ni contraseñas (*tokens*) extranjeras. El usuario del sistema operativo es el único señor y soberano. Todo se guarda en vuestras propias tierras. El artefacto instala sus propias dependencias si faltasen (`yt-dlp`, `python-vlc`, `pygame`, `pillow`, `numpy`, `imageio-ffmpeg`) y se reinicia solo tras la primera forja. Si el entorno de `VLC` no estuviere en el reino, intentará convocarlo mediante los heraldos del sistema (`winget`, `brew`, `apt`, `dnf` o `pacman`), según los fueros del territorio donde se ejecute.
+
+---
+
+## VIII. Los Atajos del Caballero
+
+| Tecla / Atajo | Acción Consagrada |
+| :---: | :--- |
+| **Espacio** | Pausar y reanudar el cantar activo. |
+| **N / P** | Avanzar al siguiente cantar o regresar al previo. |
+| **+ / -** | Elevar o descender el volumen del elixir musical. |
+| **← / →** | Retroceder o avanzar diez segundos en el tiempo. |
+| **[ / ]** | Minorar o aumentar la velocidad del galope. |
+| **, / .** | Descender o elevar el tono por un semitono. |
+| **S / R** | Alterar el orden (azar) y repetir el cantar. |
+| **F** | Marcar como favorito de vuestras arcas. |
+| **G** | Guardar la lista actual en el pergamino. |
+| **Y** | Sincronizar todas las listas guardadas del reino. |
+| **I** | Regresar al hogar (la vidriera animada). |
+| **L** | Desplegar la gran biblioteca. |
+| **/** | Invocar el motor de búsqueda. |
+| **Q** | Clausurar el ingenio y salir en paz. |
+
+---
+
+## IX. Breve Manifiesto
+*Heraldic Player* no aspira a ser el soberano más rápido ni el más colosal del orbe. **Su único fin es ser honesto**: usar la gran biblioteca sin intermediarios, descargar sin pedir venia a ningún señor, ecualizar sin comerciar con vuestros secretos y vestir todo el conjunto con la solemnidad de un escudo de armas. Un ingenio escrito para perdurar, para ser leído y para sonar con fuerza en las tabernas.
+
+---
+*¡Que la música llene vuestra taberna, Señor de los Acordes!*
