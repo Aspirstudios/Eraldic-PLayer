@@ -34,7 +34,7 @@ You are not before a crude wrapper nor an imitation of the commercial interfaces
 - [VI. The Main Screen: An Animated Stained-Glass Window](#vi-the-main-screen-an-animated-stained-glass-window)
 - [VII. No Tributes, No Accounts, No Noise](#vii-no-tributes-no-accounts-no-noise)
 - [The Knight’s Shortcuts](#the-knights-shortcuts)
-- [IX. Brief Manifesto](#ix-brief-manifesto)
+
 
 ---
 
@@ -129,7 +129,4 @@ The artifact has the ability to install its own dependencies if it detects that 
 
 ---
 
-<a name="ix-brief-manifesto"></a>
-### 𝓘𝓧. 𝓑𝓻𝓲𝓮𝓯 𝓜𝓪𝓷𝓲𝓯𝓮𝓼𝓽𝓸
 
-*(The source text has no body for this section.)*
